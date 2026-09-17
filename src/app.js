@@ -1,4 +1,5 @@
 ﻿const sequelize = require('./models')
+const { mongoose } = require('./models/mongo')
 
 // Synchronize your instance of sequelize with the DB engine:
 sequelize.sync({ /* alter: true, force: true */ })

@@ -7,7 +7,8 @@ const sequelize = new Sequelize({
     dialect: process.env.DB_DIALECT || 'mysql',
     username: process.env.DB_USERNAME || 'root',
     password: process.env.DB_PASSWORD || 'admin',
-    host: process.env.DB_HOST || 'localhost'
+    host: process.env.DB_HOST || 'localhost',
+    logging: false,
 })
 
 // Create some models:
@@ -17,7 +18,7 @@ sequelize.define('Car', {
     color: DataTypes.STRING(100),
     odometer: DataTypes.INTEGER,
     manufactureDate: DataTypes.DATEONLY,
-    isElectric: { 
+    isElectric: {
         type: DataTypes.BOOLEAN,
         allowNull: true,
     }

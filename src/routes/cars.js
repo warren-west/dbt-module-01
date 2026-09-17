@@ -1,6 +1,22 @@
 const router = require('express').Router()
 
 const sequelize = require('../models')
+const db = require('../models/mongo')
+
+// TODO: Clean up MongoDb routes to use best practices.
+
+// some temp routes here for MongoDb demo:
+router.get('/mongocars', async (req, res) => {
+    const results = await db.car.find()
+
+    res.json(results)
+    return
+})
+
+router.get('/mongocar/:id', async (req, res) => {
+    const result = await db.car.findOne({ _id: req.params.id }).lean()
+    res.json(result)
+})
 
 // get all cars
 router.get('/', async (req, res) => {
