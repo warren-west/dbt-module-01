@@ -1,6 +1,6 @@
 # Express API
 
-A small Express.js backend including '/', '/health', and '/cars' endpoints.
+A small Express.js backend including '/', '/health', '/cars', and '/buyers' endpoints.
 
 ## Setup
 
@@ -25,3 +25,16 @@ The server runs on `http://localhost:3000` by default (set `PORT` to override).
 - `POST /cars` - insert new car, creates a new car entry in the database.
 - `PUT /cars/:id` - update car by ID, updates an existing car's information.
 - `DELETE /cars/:id` - delete car by ID, removes a car from the database.
+
+### Buyers
+
+- `GET /buyers` - fetch all buyers, returns a list of all buyers in the database.
+- `GET /buyers/:id` - fetch a buyer by ID, returns a specific buyer by its ID.
+- `POST /buyers` - insert a new buyer. The request body may include `fullname` and `dob`.
+- `PUT /buyers/:id` - update a buyer by ID. The request body may include `fullname` and `dob`.
+- `DELETE /buyers/:id` - delete a buyer by ID, removes a buyer from the database.
+
+Buyer fields:
+
+- `fullname` - buyer's full name.
+- `dob` - buyer's date of birth in `YYYY-MM-DD` format.
