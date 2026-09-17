@@ -1,15 +1,15 @@
 -- Insert 10 records into the Cars table
-INSERT INTO cars (year, brand, color, odometer, manufactureDate) VALUES
-('2021', 'Toyota', 'Silver', 35200, '2021-03-15'),
-('2019', 'Honda', 'Blue', 58100, '2019-06-20'),
-('2022', 'Ford', 'Black', 18450, '2022-01-10'),
-('2020', 'Chevrolet', 'White', 42000, '2020-11-05'),
-('2023', 'BMW', 'Grey', 9200, '2023-04-18'),
-('2018', 'Audi', 'Red', 67300, '2018-08-22'),
-('2021', 'Nissan', 'Black', 31000, '2021-09-12'),
-('2020', 'Hyundai', 'White', 29500, '2020-02-28'),
-('2022', 'Tesla', 'Red', 14200, '2022-07-04'),
-('2017', 'Subaru', 'Green', 82100, '2017-05-19');
+INSERT INTO cars (year, brand, color, odometer, manufactureDate, isElectric) VALUES
+('2021', 'Toyota', 'Silver', 35200, '2021-03-15', true),
+('2019', 'Honda', 'Blue', 58100, '2019-06-20', true),
+('2022', 'Ford', 'Black', 18450, '2022-01-10', false),
+('2020', 'Chevrolet', 'White', 42000, '2020-11-05', true),
+('2023', 'BMW', 'Grey', 9200, '2023-04-18', true),
+('2018', 'Audi', 'Red', 67300, '2018-08-22', true),
+('2021', 'Nissan', 'Black', 31000, '2021-09-12', false),
+('2020', 'Hyundai', 'White', 29500, '2020-02-28', true),
+('2022', 'Tesla', 'Red', 14200, '2022-07-04', true),
+('2017', 'Subaru', 'Green', 82100, '2017-05-19', true);
 
 -- Insert 10 records into the Buyers table
 INSERT INTO buyers (fullname, dob) VALUES

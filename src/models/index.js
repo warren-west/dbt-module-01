@@ -17,6 +17,10 @@ sequelize.define('Car', {
     color: DataTypes.STRING(100),
     odometer: DataTypes.INTEGER,
     manufactureDate: DataTypes.DATEONLY,
+    isElectric: { 
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+    }
 }, {
     timestamps: false
 })
